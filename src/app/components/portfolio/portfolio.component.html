@@ -1,0 +1,58 @@
+<div class="portfolio">
+    <div class="title">
+      Portfolio
+    </div>
+    <div class="description">
+      Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+    </div>
+    <div class="button-container">
+      <button class="button" id="all" (click)="updateImage('all')">All</button>
+      <button class="button" id="web" (click)="updateImage('web')">Web Desing</button>
+      <button class="button" id="graphic" (click)="updateImage('graphic')">Graphic Desing</button>
+      <button class="button" id="artwork" (click)="updateImage('artwork')">Artwork</button>
+    </div>
+    <div class="image-container">
+      <!-- <div class="image-item">
+        <img src="/assets/images/portfolio-1.png" (click)="imgClick(0)" >
+      </div>
+      <div class="image-item">
+        <img src="/assets/images/portfolio-2.png" (click)="imgClick(1)">
+      </div>
+      <div class="image-item">
+        <img src="/assets/images/portfolio-3.png" (click)="imgClick(2)">
+      </div>
+      <div class="image-item">
+        <img src="/assets/images/portfolio-4.png" (click)="imgClick(3)">
+      </div>
+      <div class="image-item">
+        <img src="/assets/images/portfolio-5.png" (click)="imgClick(4)">
+      </div>
+      <div class="image-item">
+        <img src="/assets/images/portfolio-6.png" (click)="imgClick(5)">
+      </div>
+      <div class="image-item">
+        <img src="/assets/images/portfolio-7.png" (click)="imgClick(6)">
+      </div >
+      <div class="image-item">
+        <img src="/assets/images/portfolio-8.png" (click)="imgClick(7)">
+      </div>
+      <div class="image-item">
+        <img src="/assets/images/portfolio-9.png" (click)="imgClick(8)">
+      </div>
+      <div class="image-item">
+        <img src="/assets/images/portfolio-10.png" (click)="imgClick(9)">
+      </div>
+      <div class="image-item">
+        <img src="/assets/images/portfolio-11.png" (click)="imgClick(10)">
+      </div>
+      <div class="image-item">
+        <img src="/assets/images/portfolio-12.png" (click)="imgClick(11)">
+      </div> -->
+    </div>
+</div>
+<div class="modal" [class.show-modal]="showModal" (click)="closemodal()">
+  <span class="close" (click)="closemodal()">
+    &times;
+  </span>
+  <img class="modal-content" id="img01">
+</div>

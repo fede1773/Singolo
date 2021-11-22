@@ -1,0 +1,95 @@
+.about-us{
+    width: 100%;
+    background: #F2F2F2;
+
+    .profiles{
+        width: 100%;
+        padding-top: 57px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 68px;
+        display: flex;
+        box-sizing: border-box; 
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .profile-item{
+            width:30%;
+            padding-bottom: 16px;
+            display: flex;
+            padding-right: 40px;
+            box-sizing: border-box; 
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .profile-image{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .profile-description{
+
+                .name{
+                    font-family: Lato;
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 18px;
+                    line-height: 18px;
+                    color: #666D89;
+                    padding-top: 17px;
+                    padding-bottom: 7px;
+                }
+    
+                .about-description{
+                    font-family: Lato;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 22px;
+                    text-align: justify;
+                    color: #767E9E;
+                    padding-bottom: 12px;
+    
+                }
+            }
+
+            .socials{
+                
+                .icon{
+                    padding-right: 8px;
+                }
+            }
+        }
+    }
+    .title{
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 36px;
+        color: #666D89;
+        padding-top: 59px;
+        padding-left: 40px;
+    }    
+    
+    .description{
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 30px;
+        color: #767E9E;
+        padding-top: 32px;
+        padding-left: 40px;
+        padding-right: 40px;
+        }
+    @media (max-width: 719px){
+        .profiles{
+            .profile-item{
+                width: 100%;
+            }
+        }
+    }
+}

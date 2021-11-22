@@ -1,0 +1,95 @@
+.our-services{
+    width: 100%;
+    background: #F2F2F2;
+    
+    .services-list{
+        width: 100%;
+        padding-top: 32px;
+        padding-left: 40px;
+        padding-bottom: 32px;
+        padding-right: 40px;
+        display: flex;
+        box-sizing: border-box; 
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+
+        .service-item{
+            width: 29%;
+            padding-bottom: 16px;
+            display: flex;
+            padding-right: 40px;
+            
+            .service-title{
+                font-family: Lato;
+                font-style: normal;
+                font-weight: 900;
+                font-size: 18px;
+                line-height: 18px;
+                color: #666D89;
+
+            }
+
+            .service-content{
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 22px;
+                text-align: justify;
+                color: #767E9E;
+                padding-top: 16px;
+                //height: 77px;
+                
+            }
+
+            .service-icon{
+                width: 60px;
+                margin-right: 16px;
+                img{
+                    width: 60px;
+                }
+            }
+        }
+    }
+    .title{
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 36px;
+        color: #666D89;
+        padding-top: 59px;
+        padding-left: 40px;
+    }    
+    
+    .description{
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 30px;
+        color: #767E9E;
+        padding-top: 32px;
+        padding-left: 40px;
+        padding-right: 40px;
+        }
+    @media (min-width:720px) and (max-width: 1020px){
+        .services-list{
+            .service-item{
+                width: 44%;
+            }
+        }
+    }
+    @media (max-width: 719px){
+        .services-list{
+            .service-item{
+                width: 90%;
+            }
+        }
+    }
+    
+}
+
+
+

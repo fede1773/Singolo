@@ -1,0 +1,335 @@
+<div class="header"> 
+    <div class="logo">
+        <label class= "logo-letter">
+          SINGOLO*
+        </label>
+      </div>
+      <div class="main-var">
+        <label class="main-var-letter active">HOME</label>
+        <label class="main-var-letter">·</label>
+        <label class="main-var-letter">SERVICES</label>
+        <label class="main-var-letter">·</label>
+        <label class="main-var-letter">PORTFOLIO</label>
+        <label class="main-var-letter">·</label>
+        <label class="main-var-letter">ABOUT</label>
+        <label class="main-var-letter">·</label>
+        <label class="main-var-letter">CONTACT</label>
+      </div>
+</div>
+<div class="mobile-header">
+  <div class="burger-menu" (click)="expandSideNavbar()">
+    <div class="horizontal-bar"></div>
+    <div class="horizontal-bar"></div>
+    <div class="horizontal-bar"></div>
+  </div>
+  <div class="mobile-logo">
+    <label class="mobile-logo-letter">SINGOLO*</label>
+  </div>
+</div>
+
+<div class="side-navbar" [class.expand]="showSideNavbar" (click)="collapseSideNavbar()">
+  <div class="side-navbar-menu">
+    <div class="side-navbar-menu-title">
+      <div class="side-navbar-menu-icon">
+        <div class="horizontal-bar"></div>
+        <div class="horizontal-bar"></div>
+        <div class="horizontal-bar"></div>
+      </div>
+      <div class= "side-navbar-logo">
+        <label class= "side-navbar-logo-letter">SINGOLO*</label>
+      </div>
+    </div>
+    <div class="side-navbar-menu-items">
+      <div class="side-navbar-menu-item">
+        <label class="menu-letter active">HOME</label>
+      </div>
+      <div class="side-navbar-menu-item">
+        <label class="menu-letter">SERVICES</label>
+      </div>
+      <div class="side-navbar-menu-item">
+        <label class="menu-letter">PORTFOLIO</label>
+      </div>
+      <div class="side-navbar-menu-item">
+        <label class="menu-letter">ABOUT</label>
+      </div>
+      <div class="side-navbar-menu-item">
+        <label class="menu-letter">CONTACT</label>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- <div class="slider">   
+    <div class="arrow-left">
+        <img src="/assets/icons/arrow-left.svg">
+    </div>
+    <div class="content">
+        <img src="assets/images/phone-image.png">
+    </div>
+    <div class="arrow-right">
+        <img src="/assets/icons/arrow-right.svg">
+    </div>
+
+  </div>
+  <div class="our-services">
+    <div class="title">
+       Our Services
+    </div>
+    <div class="description">
+        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+    </div>
+    <div class="services-list">
+        <div class="service-item">
+            <div class="service-icon">
+                <img src="/assets/icons/pen.svg">
+            </div>
+            <div>
+                <div class="service-title">
+                    Custom Desing
+                </div>
+                <div class="service-content">
+                    Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
+                </div>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-icon">
+              <img src="/assets/icons/lamp.svg">
+            </div>
+            <div>
+              <div class="service-title">
+                  Inovative Ideas
+
+              </div>
+              <div class="service-content">
+                  Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
+              </div>
+          </div>
+        </div>
+        <div class="service-item">
+            <div class="service-icon">
+              <img src="/assets/icons/heart.svg">
+            </div>
+            <div>
+              <div class="service-title">
+                  Love Is The Answer
+              </div>
+              <div class="service-content">
+                  Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
+              </div>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-icon">
+              <img src="/assets/icons/phone.svg">
+            </div>
+            <div>
+              <div class="service-title">
+                  Responsive Layout
+              </div>
+              <div class="service-content">
+                  Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.
+              </div>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-icon">
+              <img src="/assets/icons/chat.svg">
+            </div>
+            <div>
+              <div class="service-title">
+                  24 / 7 Support
+              </div>
+              <div class="service-content">
+                  Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .
+              </div>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-icon">
+              <img src="/assets/icons/star.svg">
+            </div>
+            <div>
+              <div class="service-title">
+                  Feel Like A Star
+              </div>
+              <div class="service-content">
+                  Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
+              </div>
+            </div>
+        </div> 
+    </div>
+</div>
+<div class="portfolio">
+  <div class="title">
+    Portfolio
+  </div>
+  <div class="description">
+    Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+  </div>
+  <div class="button-container">
+    <button class="button">All</button>
+    <button class="button">Web Desing</button>
+    <button class="button">Graphic Desing</button>
+    <button class="button">Artwork</button>
+  </div>
+  <div class="image-container">
+    <div class="image-item">
+      <img src="/assets/images/portfolio-1.png">
+    </div>
+    <div class="image-item">
+      <img src="/assets/images/portfolio-2.png">
+    </div>
+    <div class="image-item">
+      <img src="/assets/images/portfolio-3.png">
+    </div>
+    <div class="image-item">
+      <img src="/assets/images/portfolio-4.png">
+    </div>
+    <div class="image-item">
+      <img src="/assets/images/portfolio-5.png">
+    </div>
+    <div class="image-item">
+      <img src="/assets/images/portfolio-6.png">
+    </div>
+    <div class="image-item">
+      <img src="/assets/images/portfolio-7.png">
+    </div >
+    <div class="image-item">
+      <img src="/assets/images/portfolio-8.png">
+    </div>
+    <div class="image-item">
+      <img src="/assets/images/portfolio-9.png">
+    </div>
+    <div class="image-item">
+      <img src="/assets/images/portfolio-10.png">
+    </div>
+    <div class="image-item">
+      <img src="/assets/images/portfolio-11.png">
+    </div>
+    <div class="image-item">
+      <img src="/assets/images/portfolio-12.png">
+    </div>
+  </div>
+</div>
+<div class="about-us">
+  <div class="title">
+    About Us
+  </div>
+  <div class="description">
+    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+  </div>
+  <div class="profiles">
+    <div class="profile-item">
+      <div class="profile-image">
+        <img src="/assets/images/photo-1.jpg">
+      </div>
+      <div class="profile-description">
+        <div class = "name">
+          Adam Jensen
+        </div>
+        <div class="about-description">
+          Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
+        </div>
+      </div>
+      <div class="socials">
+        <img class="icon" src="/assets/icons/ico-facebook.svg">
+        <img class="icon" src="/assets/icons/ico-google-plus.svg">
+        <img class="icon" src="/assets/icons/ico-linkedin.svg">
+        <img class="icon" src="/assets/icons/ico-twitter.svg">
+      </div>
+    </div>
+    <div class="profile-item">
+      <div class="profile-image">
+        <img src="/assets/images/photo-2.jpg">
+      </div>
+      <div class="profile-description">
+        <div class = "name">
+          Desmond Miles
+        </div>
+        <div class="about-description">
+          Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
+        </div>
+      </div>
+      <div class="socials">
+        <img class="icon" src="/assets/icons/ico-facebook.svg">
+        <img class="icon" src="/assets/icons/ico-google-plus.svg">
+        <img class="icon" src="/assets/icons/ico-linkedin.svg">
+        <img class="icon" src="/assets/icons/ico-twitter.svg">
+      </div>
+    </div>
+    <div class="profile-item">
+      <div class="profile-image">
+        <img src="/assets/images/photo-3.jpg">
+      </div>
+      <div class="profile-description">
+        <div class = "name">
+          Scolara Visari
+        </div>
+        <div class="about-description">
+          Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
+        </div>
+      </div>
+      <div class="socials">
+        <img  class="icon" src="/assets/icons/ico-facebook.svg">
+        <img class="icon" src="/assets/icons/ico-google-plus.svg">
+        <img class="icon" src="/assets/icons/ico-linkedin.svg">
+        <img class="icon" src="/assets/icons/ico-twitter.svg">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="get-a-quote">
+  <div class="title quote-title">
+    Get a Quote
+  </div>
+  <div class="description quote-description">
+    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+  </div>
+
+  <div class="quote-container">
+    <div class="form">
+      <form>
+        <input class= "input" placeholder="Name (required)">
+        <input class= "input" placeholder="Email (required)">
+        <input class= "input" placeholder="Subject">
+        <textarea class= "describe" placeholder="Describe your project in detail"></textarea>
+        <button class="form-button">SEND</button>
+      </form>
+    </div>
+    <div class="information">
+      <div class="inner-title">
+        Contact Information
+      </div>
+      <div class="inner-description">
+        Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+      </div>
+      <div class="contact-info">
+        <div class="location">
+          <img src="/assets/icons/ico-location.svg">
+          <a class="street">Elm St. 14/05 Lost City</a>
+        </div>
+        <div class="phone">
+          <img src="/assets/icons/ico-phone.svg">
+          <a class="phone-num">03528 331 86 35</a>
+        </div>
+        <div class="mail">
+          <img src="/assets/icons/ico-mail.svg">
+          <a class="mail-info">info@singolo.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<app-image-component></app-image-component>
+<app-our-services></app-our-services>
+<app-portfolio></app-portfolio>
+<app-about-us></app-about-us>
+<app-get-a-quote></app-get-a-quote>
+
+<div class="footer">
+    <img class="space" src="/assets/icons/ico-facebook.svg">
+    <img class="space" src="/assets/icons/ico-google-plus.svg">
+    <img class="space" src="/assets/icons/ico-twitter.svg">
+    <img class="space" src="/assets/icons/ico-linkedin.svg">
+  </div>
+  <router-outlet></router-outlet>
