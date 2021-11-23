@@ -1,0 +1,11 @@
+<div class="mobile-header">
+    <div class="burger-menu" (click)="expandSideNavbar()">
+      <div class="horizontal-bar"></div>
+      <div class="horizontal-bar"></div>
+      <div class="horizontal-bar"></div>
+    </div>
+    <div class="mobile-logo">
+      <label class="mobile-logo-letter">SINGOLO*</label>
+    </div>
+  </div>
+<app-side-navbar [showSideNavbar]="showSideNavbar" (closeSideNavbar)="collapseSideNavbar()"></app-side-navbar>

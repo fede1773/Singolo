@@ -1,4 +1,4 @@
-<div class="header"> 
+<!-- <div class="header"> 
     <div class="logo">
         <label class= "logo-letter">
           SINGOLO*
@@ -15,8 +15,10 @@
         <label class="main-var-letter">·</label>
         <label class="main-var-letter">CONTACT</label>
       </div>
-</div>
-<div class="mobile-header">
+</div> -->
+<app-header></app-header>
+<app-mobile-header></app-mobile-header>
+<!-- <div class="mobile-header">
   <div class="burger-menu" (click)="expandSideNavbar()">
     <div class="horizontal-bar"></div>
     <div class="horizontal-bar"></div>
@@ -25,9 +27,9 @@
   <div class="mobile-logo">
     <label class="mobile-logo-letter">SINGOLO*</label>
   </div>
-</div>
+</div> -->
 
-<div class="side-navbar" [class.expand]="showSideNavbar" (click)="collapseSideNavbar()">
+<!-- <div class="side-navbar" [class.expand]="showSideNavbar" (click)="collapseSideNavbar()">
   <div class="side-navbar-menu">
     <div class="side-navbar-menu-title">
       <div class="side-navbar-menu-icon">
@@ -57,7 +59,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
   <!-- <div class="slider">   
     <div class="arrow-left">
         <img src="/assets/icons/arrow-left.svg">
@@ -321,15 +323,10 @@
   </div>
 </div> -->
 <app-image-component></app-image-component>
-<app-our-services></app-our-services>
-<app-portfolio></app-portfolio>
-<app-about-us></app-about-us>
-<app-get-a-quote></app-get-a-quote>
+<app-our-services id="service"></app-our-services>
+<app-portfolio  id="portfolio"></app-portfolio>
+<app-about-us id="about"></app-about-us>
+<app-get-a-quote id="quote"></app-get-a-quote>
+<app-footer></app-footer>
 
-<div class="footer">
-    <img class="space" src="/assets/icons/ico-facebook.svg">
-    <img class="space" src="/assets/icons/ico-google-plus.svg">
-    <img class="space" src="/assets/icons/ico-twitter.svg">
-    <img class="space" src="/assets/icons/ico-linkedin.svg">
-  </div>
   <router-outlet></router-outlet>

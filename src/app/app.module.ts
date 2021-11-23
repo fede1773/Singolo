@@ -8,6 +8,10 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { GetAQuoteComponent } from './components/get-a-quote/get-a-quote.component';
 import { ImageComponentComponent } from './components/image-component/image-component.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MobileHeaderComponent } from './components/mobile-header/mobile-header.component';
+import { SideNavbarComponent } from './components/side-navbar/side-navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { ImageComponentComponent } from './components/image-component/image-comp
     PortfolioComponent,
     AboutUsComponent,
     GetAQuoteComponent,
-    ImageComponentComponent
+    ImageComponentComponent,
+    HeaderComponent,
+    FooterComponent,
+    MobileHeaderComponent,
+    SideNavbarComponent
   ],
   imports: [
     BrowserModule,
