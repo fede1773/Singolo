@@ -30,7 +30,9 @@ import { SideNavbarComponent } from './components/side-navbar/side-navbar.compon
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

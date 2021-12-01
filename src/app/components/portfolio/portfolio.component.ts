@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-interface IImagesArray {
-  all: string[];
-  web: string[];
-  graphic: string[];
-  artwork: string[];
-
-}
+import { IImagesArray } from 'src/app/services/portfolio.model';
+import { PortfolioService } from 'src/app/services/portfolio.service';
 
 
 @Component({
@@ -32,43 +27,53 @@ export class PortfolioComponent implements OnInit {
   //   "/assets/images/portfolio-12.png",
   // ];
 
-  imagesArray: IImagesArray = {
-      all:["/assets/images/portfolio-1.png",
-      "/assets/images/portfolio-2.png",
-      "/assets/images/portfolio-3.png",
-      "/assets/images/portfolio-4.png",
-      "/assets/images/portfolio-5.png",
-      "/assets/images/portfolio-6.png",
-      "/assets/images/portfolio-7.png",
-      "/assets/images/portfolio-8.png",
-      "/assets/images/portfolio-9.png",
-      "/assets/images/portfolio-10.png",
-      "/assets/images/portfolio-11.png",
-      "/assets/images/portfolio-12.png",],
+  // imagesArray: IImagesArray = {
+  //     all:["/assets/images/portfolio-1.png",
+  //     "/assets/images/portfolio-2.png",
+  //     "/assets/images/portfolio-3.png",
+  //     "/assets/images/portfolio-4.png",
+  //     "/assets/images/portfolio-5.png",
+  //     "/assets/images/portfolio-6.png",
+  //     "/assets/images/portfolio-7.png",
+  //     "/assets/images/portfolio-8.png",
+  //     "/assets/images/portfolio-9.png",
+  //     "/assets/images/portfolio-10.png",
+  //     "/assets/images/portfolio-11.png",
+  //     "/assets/images/portfolio-12.png",],
    
-      web:["/assets/images/portfolio-1.png",
-      "/assets/images/portfolio-2.png",
-      "/assets/images/portfolio-3.png",
-      "/assets/images/portfolio-4.png"],
+  //     web:["/assets/images/portfolio-1.png",
+  //     "/assets/images/portfolio-2.png",
+  //     "/assets/images/portfolio-3.png",
+  //     "/assets/images/portfolio-4.png",],
   
-      graphic:["/assets/images/portfolio-5.png",
-      "/assets/images/portfolio-6.png",
-      "/assets/images/portfolio-7.png",
-      "/assets/images/portfolio-8.png"],
+  //     graphic:["/assets/images/portfolio-5.png",
+  //     "/assets/images/portfolio-6.png",
+  //     "/assets/images/portfolio-7.png",
+  //     "/assets/images/portfolio-8.png"],
     
-      artwork:["/assets/images/portfolio-9.png",
-      "/assets/images/portfolio-10.png",
-      "/assets/images/portfolio-11.png",
-      "/assets/images/portfolio-12.png"]
-    };
+  //     artwork:["/assets/images/portfolio-9.png",
+  //     "/assets/images/portfolio-10.png",
+  //     "/assets/images/portfolio-11.png",
+  //     "/assets/images/portfolio-12.png"]
+  //   };
+
+  imageArray: IImagesArray = {
+    all: [],
+    artwork: [],
+    graphic: [],
+    web: []
+  };
+
+  selectedImages: string[] = [];
 
   showModal = false;
 
   filter = "all";
 
-  constructor() { }
+  constructor(private portfolioService: PortfolioService) { }
 
   ngOnInit(): void {
+    this.portfolioService.getData().subscribe(data =>this.imageArray = data);
     this.updateImage("all")
   }
 
@@ -85,7 +90,8 @@ export class PortfolioComponent implements OnInit {
   updateImage(filter: string){
     const container: any = document.querySelector(".image-container")
     container.innerHTML ="";
-    this.imagesArray[filter as keyof IImagesArray].forEach(url => {
+    this.selectedImages = this.imageArray[this.filter as keyof IImagesArray];
+    this.imageArray[filter as keyof IImagesArray].forEach(url => {
       const img: HTMLImageElement = document.createElement("img");
       img.src = url;
       img.classList.add("image-portfolio");

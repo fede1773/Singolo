@@ -12,10 +12,10 @@
       <button class="button" id="artwork" (click)="updateImage('artwork')">Artwork</button>
     </div>
     <div class="image-container">
-      <!-- <div class="image-item">
-        <img src="/assets/images/portfolio-1.png" (click)="imgClick(0)" >
+       <div class="image-item" *ngFor ="let image of selectedImages">
+        <img [src]="image" (click)="imgClick(image)" >
       </div>
-      <div class="image-item">
+      <!-- <div class="image-item">
         <img src="/assets/images/portfolio-2.png" (click)="imgClick(1)">
       </div>
       <div class="image-item">
@@ -47,7 +47,7 @@
       </div>
       <div class="image-item">
         <img src="/assets/images/portfolio-12.png" (click)="imgClick(11)">
-      </div> -->
+      </div> --> 
     </div>
 </div>
 <div class="modal" [class.show-modal]="showModal" (click)="closemodal()">
